@@ -45,41 +45,81 @@
   </head>
   <body id="main-body">
     <!-- Header/Navbar -->
-    <header id="header" class="navbar container">
-      <nav class="navbar fixed-top bg-body-tertiary">
-        <div class="container-fluid">
-          <h1 class="navbar-title"><a href="#" class="text-black">Feast</a></h1>
-          <div class="navbar navbar-list-item">
-            <ul class="navbar-list d-flex align-items-center mb-0">
-              <li class="navlink-item mx-3 fw-semibold">
-                <a href="#home" class="navbar-link text-black text-black"
-                  >Home</a
-                >
-              </li>
-              <li class="navlink-item mx-3 fw-semibold">
-                <a href="#about" class="navbar-link text-black">About Us</a>
-              </li>
-              <li class="navlink-item mx-3 fw-semibold">
-                <a href="#shop" class="navbar-link text-black">Shop</a>
-              </li>
-              <li class="navlink-item mx-3 fw-semibold">
-                <a href="#blog" class="navbar-link text-black">Blog</a>
-              </li>
-              <li class="navlink-item mx-3 fw-semibold">
-                <a href="#contact" class="navbar-link text-black">Contact Us</a>
-              </li>
-            </ul>
-            <div class="reservation-btn">
-              <button
-                class="btn mx-2 px-5 py-2 rounded-0 text-white fw-bold btncustom"
-              >
-                Reservation
-              </button>
-            </div>
+    <!-- <nav class="navbar fixed-top bg-gray top-0" id="navbar1">
+      <div class="container navbaritm">
+        <div class="logo">
+          <a href="#" class="text-black">Feast</a>
+        </div>
+        <div class="openMenu"><i class="fa fa-bars"></i></div>
+        <div class="navbar navbar-list-item mainMenu">
+          <ul class="navbar-list d-flex align-items-center mb-0">
+            <li class="navlink-item mx-3 fw-semibold">
+              <a href="#home" class="navbar-link text-black text-black">Home</a>
+            </li>
+            <li class="navlink-item mx-3 fw-semibold">
+              <a href="#about" class="navbar-link text-black">About Us</a>
+            </li>
+            <li class="navlink-item mx-3 fw-semibold">
+              <a href="#shop" class="navbar-link text-black">Shop</a>
+            </li>
+            <li class="navlink-item mx-3 fw-semibold">
+              <a href="#blog" class="navbar-link text-black">Blog</a>
+            </li>
+            <li class="navlink-item mx-3 fw-semibold">
+              <a href="#contact" class="navbar-link text-black">Contact Us</a>
+            </li>
+          </ul>
+          <div class="reservation-btn">
+            <button
+              class="btn mx-2 px-5 py-2 rounded-0 text-white fw-bold btncustom"
+            >
+              Reservation
+            </button>
           </div>
         </div>
-      </nav>
-    </header>
+      </div>
+    </nav> -->
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container">
+        <a class="navbar-brand fs-1 fw-bold text-black" href="#">Feast</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav justify-content-end">
+            <li class="nav-item active">
+              <a class="nav-link fw-bold fs-5 text-black" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-bold fs-5 text-black" href="#about">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-bold fs-5 text-black" href="#shop">Shop</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-bold fs-5 text-black" href="#blog">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-bold fs-5 text-black" href="#contact"
+                >Contact Us</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
 
     <main>
       <article class="main-article">
@@ -258,12 +298,12 @@
                   class="w-100 about-img"
                 />
               </div>
-              <div class="px-5 col">
+              <div class="px-5 col about1">
                 <h3 class="customh2 fw-bold mb-4">
                   Caferio, Burgers, and Best Pizzas
                   <span class="h3span">in Town!</span>
                 </h3>
-                <p class="fw-semibold mb-4">
+                <p class="mb-4">
                   The restaurants in Hangzhou also catered to many northern
                   Chinese who had fled south from Kaifeng during the Jurchen
                   invasion of the 1120s, while it is also known that many
@@ -324,15 +364,17 @@
         <!-- shop section -->
         <section class="shop-section p120end" id="shop">
           <div class="container">
-            <p class="text-center text-danger fw-bold">Popular Dishes</p>
+            <p class="text-center text-danger fw-bold shop-section-highlight">
+              Popular Dishes
+            </p>
             <h2 class="text-center customh2">
               Our Delicious <span class="shop-span">Foods</span>
             </h2>
-            <p class="text-center">
+            <p class="text-center shop-section-text">
               Food is any substance consumed to provide nutritional support for
               an organism.
             </p>
-            <ul class="d-flex justify-content-center gap-3">
+            <ul class="d-flex justify-content-center gap-3 btn-list">
               <button class="btn btncustom0 rounded-0 text-white fw-bold">
                 All
               </button>
@@ -346,7 +388,7 @@
                 <img
                   src="/assets/images/food-menu-1.png"
                   alt=""
-                  class="w-100 mt-4"
+                  class="w-100 mt-4 shop-img"
                 />
                 <div class="wrapper">
                   <p class="category-text sd-f fw-semibold">Chicken</p>
@@ -370,7 +412,7 @@
                 <img
                   src="/assets/images/food-menu-2.png"
                   alt=""
-                  class="w-100 mt-4"
+                  class="w-100 mt-4 shop-img"
                 />
                 <div class="wrapper">
                   <p class="category-text sd-f fw-semibold">Noodles</p>
@@ -393,7 +435,7 @@
                 <img
                   src="/assets/images/food-menu-3.png"
                   alt=""
-                  class="w-100 mt-4"
+                  class="w-100 mt-4 shop-img"
                 />
                 <div class="wrapper">
                   <p class="category-text sd-f fw-semibold">Pizzas</p>
@@ -416,7 +458,7 @@
                 <img
                   src="/assets/images/food-menu-4.png"
                   alt=""
-                  class="w-100 mt-4"
+                  class="w-100 mt-4 shop-img"
                 />
                 <div class="wrapper">
                   <p class="category-text sd-f fw-semibold">Burrito</p>
@@ -439,7 +481,7 @@
                 <img
                   src="/assets/images/food-menu-5.png"
                   alt=""
-                  class="w-100 mt-4"
+                  class="w-100 mt-4 shop-img"
                 />
                 <div class="wrapper">
                   <p class="category-text sd-f fw-semibold">Nuggests</p>
@@ -462,7 +504,7 @@
                 <img
                   src="/assets/images/food-menu-6.png"
                   alt=""
-                  class="w-100 mt-4"
+                  class="w-100 mt-4 shop-img"
                 />
                 <div class="wrapper">
                   <p class="category-text sd-f fw-semibold">Chicken</p>
@@ -562,8 +604,10 @@
         <!-- Review Section -->
         <section class="tesi-section p120end">
           <div class="container">
-            <p class="text-center text-danger fw-bold">Testimonials</p>
-            <h2 class="text-center">
+            <p class="text-center text-danger fw-bold test-text">
+              Testimonials
+            </p>
+            <h2 class="text-center test-heading">
               Our Customers <span class="shop-span">Reviews</span>
             </h2>
             <p class="text-center">
@@ -764,10 +808,12 @@
         </section>
 
         <!-- Blog section -->
-        <section class="blog-section p120end">
+        <section class="blog-section p120end" id="blog">
           <div class="container">
-            <p class="text-center text-danger fw-bold">Latest Blog Posts</p>
-            <h2 class="text-center">
+            <p class="text-center text-danger fw-bold latest-text">
+              Latest Blog Posts
+            </p>
+            <h2 class="text-center blog-heading">
               This Is All About <span class="shop-span">Foods</span>
             </h2>
             <p class="text-center">
@@ -775,7 +821,7 @@
               an organism.
             </p>
             <ul class="blog-list row gap-3">
-              <li class="col">
+              <li class="col blog-li">
                 <div class="blog-card">
                   <div class="card-banner">
                     <img src="/assets/images/blog-1.jpg" alt="" class="w-100" />
@@ -815,7 +861,7 @@
               </li>
               <!-- Edit --><!-- Edit --><!-- Edit --><!-- Edit -->
               <!-- Edit --><!-- Edit --><!-- Edit --><!-- Edit -->
-              <li class="col">
+              <li class="col blog-li">
                 <div class="blog-card">
                   <div class="card-banner">
                     <img src="/assets/images/blog-1.jpg" alt="" class="w-100" />
@@ -853,7 +899,7 @@
                   </div>
                 </div>
               </li>
-              <li class="col">
+              <li class="col blog-li">
                 <div class="blog-card">
                   <div class="card-banner">
                     <img src="/assets/images/blog-1.jpg" alt="" class="w-100" />
@@ -900,7 +946,7 @@
         <!-- 
           Booking Section 
         -->
-        <section class="booking-section">
+        <section class="booking-section p120end" id="reservation">
           <div
             class="container d-flex justify-content-center align-items-center"
           >
@@ -949,7 +995,7 @@
     <!-- 
       Footer 
     -->
-    <footer class="footer">
+    <footer class="footer" id="contact">
       <div
         class="footer-top footer-img p120end"
         style="background-image: url(/assets/images/footer-illustration.png)"

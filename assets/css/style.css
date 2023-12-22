@@ -93,7 +93,9 @@ Custom Padding, height and font
 .p60end {
   padding-block: 60px;
 }
-
+.bg-gray {
+  background-color: var(--gainsboro);
+}
 .customh1 {
   font-size: 80px;
   font-weight: 700;
@@ -125,16 +127,12 @@ Custom Padding, height and font
 /*  */
 
 /* Remove this */
-/* .custom-card {
-  background-color: transparent;
-  border: 2px solid var(--dark-orange);
-} */
+
 
 /* 
 Hero Section
  */
 .hero-section img {
-  /* background-position: bottom center; */
   width: 100%;
   height: auto;
   background-size: cover;
@@ -241,16 +239,6 @@ discount
   margin-left: 15px;
 }
 
-/* 
-About
-*/
-
-/* Remove this */
-/* .about-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-} */
 
 /* 
 Banner
@@ -387,14 +375,6 @@ Footer
   z-index: -10;
 }
 
-/* 
-Remove Later 
-*/
-
-/* 
-body {
-  background-color: rgb(255, 255, 255);
-} */
 
 .colr2asda {
   background-color: rgb(137, 137, 137);
@@ -430,168 +410,205 @@ body {
   color: #fff;
 }
 
-/* Media Query for mobile */
-
-@media (max-width: 580px) {
-  /* custom */
-  body {
-    overflow-x: hidden;
-  }
-
+@media only screen and (min-device-width: 320px) and (max-device-width: 580px) {
+  /* custom things */
   .p120end {
-    padding-block: 70px;
+    padding-block: 80px;
   }
 
-  /* hero-section */
-  .hero-container {
-    padding: 0 20px;
-  }
-  .hero-title {
-    font-size: 65px;
-  }
-  .hero-subtitle {
-    font-size: 25px;
-    margin-bottom: 10px !important;
-  }
-  .hero-text {
-    margin: 10px 0 !important;
-  }
-
-  /* Promo grid */
+  /* promo grid */
   .promo-grid {
-    display: grid;
-    grid-template-rows: repeat(2, auto);
-    grid-template-columns: repeat(2, auto);
-    max-width: 450px;
+    flex-direction: column;
+    padding: 0 30px;
   }
-  .p30 {
-    padding: 10px;
-  }
-
-  .promo-grid h2 {
-    font-size: 20px;
-  }
-  .promo-grid p {
-    font-size: 12px;
-  }
-
-  .promo-grid img {
+  .promo-card img {
+    height: 200px;
     object-fit: contain;
   }
 
-  /* About Grid */
+  /* about-section */
   .about-grid {
     flex-direction: column-reverse;
   }
-  .about-img {
-    padding-left: 30px;
-    padding-right: 30px;
-    object-fit: contain;
+  .about-grid h3 {
+    font-size: 35px;
+    margin-bottom: 10px !important;
+  }
+  .about-grid .h3span {
+    font-size: 35px;
+    line-break: strict;
+  }
+  .about-grid p {
+    font-size: 15px;
+    margin-bottom: 10px !important;
+  }
+  .about-grid span {
+    font-size: 14px;
+  }
+  .about-grid li {
+    font-size: 14px;
+    margin: 10px 0 !important;
+  }
+  .about1 {
+    padding: 0 30px !important;
   }
 
-  /* Food Section */
-
-  .food-menu-list {
-    display: grid;
-    grid-template-rows: auto;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+  /* shop section */
+  .shop-section h2,
+  span {
+    font-size: 35px;
   }
 
-  /* Discount Section */
-  .discount-section {
-    padding: 50px;
-  }
-  .discount-grid {
-    flex-direction: column;
-  }
-  .cta-img {
-    max-width: 300px;
-    max-height: 300px;
-    object-fit: contain;
-    margin: 0 auto;
-    display: flex;
-  }
-  .mob-h1 {
-    font-size: 40px;
+  .shop-section-highlight,
+  .shop-section-text {
+    margin-bottom: 10px;
   }
 
-  /* Review Grid */
-  .tesi-grid {
-    flex-direction: column;
-    display: flex;
+  .btncustom0,
+  .btncustom1 {
+    padding: 5px 10px;
+    font-size: 12px;
+  }
+
+  .btn-list {
+    gap: 8px !important;
     padding-left: 0;
   }
 
-  /* Delivery Section */
-  .delivery-grid {
-    grid-template-columns: auto;
+  .shop-img {
+    height: 200px;
+    object-fit: contain;
   }
-  .delivery-box {
-    padding: 40px 50px;
+  ul.food-menu-list {
+    padding: 0 30px;
+  }
+  .food-menu-list {
+    display: grid;
+    grid-template-columns: auto;
+    gap: 20px;
   }
 
-  /* banner-section */
+  .food-menu-card {
+    padding: 30px;
+  }
+
+  /* .discount-section */
+  .discount-grid {
+    flex-direction: column;
+  }
+
+  .cta-img {
+    object-fit: contain;
+    height: 250px;
+  }
+
+  /* .delivery-section */
+  .delivery-grid {
+    grid-template-columns: auto;
+    gap: 10px;
+  }
+
+  /* Testimony Section */
+  .test-text {
+    margin-bottom: 10px;
+  }
+
+  .test-heading,
+  .shop-span {
+    font-size: 35px;
+  }
+
+  .testi-card {
+    padding: 30px;
+  }
+
+  ul.tesi-card-ulist {
+    padding-left: 0;
+    flex-direction: column;
+  }
+
+  /* Banner Section */
   .banner-grid {
     flex-direction: column;
   }
 
-  /* blog-section */
-  .blog-list {
-    padding-left: 0;
-    flex-direction: column;
+  /* Blog section */
+  ul.blog-list {
+    padding: 0;
+  }
+
+  .latest-text {
+    margin-bottom: 10px;
+  }
+
+  .blog-heading {
+    font-size: 35px;
+  }
+
+  .blog-li {
+    padding: 0 20px;
   }
 
   .card-content {
-    padding: 30px;
+    padding: 20px;
   }
 
-  /* Footer  */
+  /* Booking section */
+  .input-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .book-table {
+    width: 100%;
+    padding: 20px;
+  }
+
+  /* footer */
   .footer-grid {
-    display: grid;
     grid-template-columns: auto;
-    grid-template-rows: auto auto auto;
-    padding: 0 30px;
   }
-}
-.p-start-end {
-  padding-block-end: 70px;
-  padding-block-start: 180px;
-}
 
-/* Sidebar Nav */
-@media (max-width: 850px) {
   ul.footer-list {
     padding-left: 0;
   }
+}
 
-  .navbar-title a {
-    font-size: 35px;
-    font-weight: 900;
+/* Hamburger Menu navbar */
+@media only screen and (max-width: 850px) {
+  /* #navbar1 {
+    display: none;
+  } */
+
+
+  nav .mainMenu {
+    height: 100vh;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    z-index: 10;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgb(0, 0, 0);
+    transition: top 1s ease 0s;
+    display: none;
   }
-
-  .navbar-title {
-    margin: auto;
+  nav .mainMenu .closeMenu {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
   }
-
-  .navbar-list-item {
-    padding-block-start: 10px;
-    font-size: 15px;
+  nav .openMenu {
+    display: block;
   }
-
-  .navbar-list {
-    margin: auto;
+  nav .mainMenu li a:hover {
+    background: none;
+    color: rgb(255, 123, 0);
   }
-
-  .btncustom {
-    padding: 5px 10px !important;
-  }
-
-  ul.navbar-list {
-    padding-left: 0 !important;
-  }
-
-  .reservation-btn {
-    margin: 10px auto 0 auto;
+  .icons i {
+    display: inline-block;
+    padding: 12px;
   }
 }
